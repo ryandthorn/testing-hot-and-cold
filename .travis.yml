@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: kf9LpycTGcHAUDz8ACD5X4rANumzbYagZ1lwKvVwauJ7Qowd7264Z7TdM5juNdjkCcQNiE6Qiby22ambbjnSR2rHjRVJfCUjXMU3GbRmdTgg0i0Mgj57ECva99tRRmEUQiI4OnjWxmrosr7bSizaYauzmz/qs8nrouSS1VLZttJViEIGpjIKOcwqLzk+AE5b2ESSbbgkCg9/iA9lOEg3U4HDL4mhXhf/p3URzcZd7V7reQ50BYZAjW85AHrvwVzc4M+nJK895U/p8Iaqe+bh0yVkEXVTyf89aqO7Sx+jntiV3ElZYteaEsTZrSeadCwbBmRbmngvLTJBBX2VtN/85fwb8jSH7O7iLIzM9YaLkc8CsmEqG8sGQAuRmzVq1aDN8eoIqk3wr4RQVy1ApPYpC42vw7WvxBBvVhhAW01Wyglmat98Nh5kLEX819py+VW1Rkq+xJDHCGcjBWCXpryvXitggr/djhlL6+qMjmefkEw0JHXU1eCLDPbU6PUQIjFOq2bDdPkdGpIwHSqavGEjna2SHsbnponJteRLoq7LV0xlvWnsXil6pM7ZZxoN142UxFQap6VTTuu8OlWQVyHgw1r2txAC2wrj3voKthVYWY/LnXr//qinbflf6kLAE4G/krkcQUoljG2Ps6OE95dux/cc11oFDKmaL+/4BWfTOUI=
+  app: testing-hot-and-cold
+  on:
+    repo: ryandthorn/testing-hot-and-cold
